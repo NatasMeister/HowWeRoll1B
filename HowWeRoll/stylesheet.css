@@ -1,0 +1,66 @@
+
+.navbar {
+    list-style-type: none;
+    padding: 2px 5px;
+    margin: 0;
+    position: fixed;
+    background-color: blue;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    top: 0;
+}
+
+.navbutton {
+    width: 13%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 7px;
+    margin: 2px 20px;
+    padding:  5px 0 5px;
+}
+
+.navbutton:hover {
+    background-color: lightgrey;
+}
+
+.navlink {
+    text-decoration: none;
+    padding: 6px 55px;
+    margin: -20px;
+    color: black;
+}
+
+.navtitle {
+    margin: 2px 20px;
+    padding:  5px 0 5px;
+
+}
+
+.FS-title {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navactive {
+    width: 13%;
+    background-color: lightgoldenrodyellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 7px;
+    margin: 2px 20px;
+    padding:  5px 0 5px;
+}
+
+.txtactive {
+    text-decoration: none;
+    padding: 6px 55px;
+    margin: -20px;
+    color: darkgrey;
+}
