@@ -4,6 +4,13 @@
         <meta charset="utf-8">
         <title>Web-Form</title>
         <link rel="stylesheet" href="stylesheet.css">
+
+        <style>
+            body {
+                margin-top: 5%;
+            }
+        </style>
+        
     </head>
     <body>
         <!--Header-->
@@ -19,12 +26,14 @@
                 <div class="formtable">
                     <table>
                         <tr>
-                            <td>
-                                <label>Fornavn:</label>
+                            <td class="lefttable">
+                                <label for="fornavn">Fornavn:</label>
                             </td>
-                            <td>
-                                <label>Etternavn:</label>
+                            <td class="lefttable"><input type="text" name="fornavn" id="fornavn" class='form-textinput' placeholder="Fornavn"></td>
+                            <td class="lefttable">
+                                <label for="etternavn">Etternavn:</label>
                             </td>
+                            <td class="lefttable"><input type="text" name="etternavn" id="etternavn" class='form-textinput' placeholder="Etternavn"></td>
                         </tr>
 
                     </table>
