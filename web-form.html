@@ -236,7 +236,9 @@
 
         function PostForm(event) {
             event.preventDefault();
-            postData('https://bacit.info', { answer: 42 })
+            const data = new FormData(event.target);
+            const JSONdata = Object.fromEntries(data.entries());
+            postData('https://bacit.info', JSONdata)
         .then((data) => {
             console.log(data); // JSON data parsed by `data.json()` call
         });
