@@ -4,12 +4,12 @@ body {
 
 .maincon {
     margin-left: 3%;
-}
+} /*Flytter alt innholdet mer inn på siden*/
 
 *{
     margin: 0;
     padding: 0;
-}
+} /*Fjerner mellomrom mellom side og navigasjon*/
 
 .navbar {
     list-style-type: none;
