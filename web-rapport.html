@@ -4,6 +4,12 @@
         <meta charset="utf-8">
         <title>Web-Rapport</title>
         <link rel="stylesheet" href="stylesheet.css">
+
+        <style>
+            .svg-overskrift {
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
         <!--Header-->
@@ -15,11 +21,58 @@
         </ul>
 
         <div class="maincon">
-            <svg xmlns="http://www.w3.org/2000/svg" height="75" width="1000" id="svgdata" style='border: 1px solid black;'>
 
+            <!--SVG-element for å vise data fra JSON-->
+            <h3 class="svg-overskrift">Spørsmålet</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" height="100px" width="1200px" id="svg-placeholder" style='border: 1px solid black;'>
+                <rect width="1200px" height="50px" fill="lightblue"></rect>
+                <g>
+                    <text x="75" y="25">PlaceLeft</text>
+                    <text x="1050" y="25">PlaceRight</text>
+                </g>
 
+                <!--Horizontal linje-->
+                <line x1="100" y1="75" x2="1100" y2="75" style="stroke: black; stroke-width: 4"></line>
+
+                <!--Vertikale linjer-->
+                <line x1="100" y1="50" x2="100" y2="150" style="stroke: black; stroke-width: 2"></line>
+                <line x1="1100" y1="50" x2="1100" y2="150" style="stroke: black; stroke-width: 2"></line>
             </svg>
+
+
         </div>
+
+        <script>
+
+            function TegnSVG (value, color, name, svgID) {
+                const svg = document.getElementById(svgID);
+                const svgns =  "http://www.w3.org/2000/svg";
+
+                //setter x- og y-verdiene
+                let Xvalue = (parseInt(value)*10) + 100;
+                let Yvalue = 75;
+
+                //lager sirkel
+                let circle = document.createElementNS (svgns, "circle");
+                    circle.setAttributeNS (null, 'x', Xvalue);
+                    circle.setAttributeNS (null, 'y', Yvalue);
+                    circle.setAttributeNS (null, 'r', 20);
+                    circle.setAttributeNS (null, 'style', 'fill: ' + color);
+
+                //setter navn inni sirklen
+                let cirName = document.createElementNS (svgns, 'text');
+                    cirName.setAttributeNS (null, 'x', Xvalue)
+                    cirName.setAttributeNS (null, 'y', Yvalue)
+                    cirName.textContent = name;
+
+                //setter verdien inni sirkelen
+                let cirValue = document.createElementNS (svgns, 'text');
+                    cirValue.setAttributeNS (null, 'x', Xvalue)
+                    cirValue.setAttributeNS (null, 'y', Yvalue);
+                    cirValue.textContent = value;
+            }
+
+        </script>
 
     </body>
 </html>
