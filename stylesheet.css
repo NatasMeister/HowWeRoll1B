@@ -2,6 +2,10 @@ body {
     margin-top: 5%;
 }
 
+.maincon {
+    margin-left: 3%;
+}
+
 *{
     margin: 0;
     padding: 0;
