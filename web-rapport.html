@@ -8,35 +8,52 @@
         <style>
             .svg-overskrift {
                 text-align: center;
+                margin-right: 6%
+            }
+
+            .svgtxt {
+                text-anchor: middle;
             }
         </style>
     </head>
     <body>
         <!--Navbar-->
-        <ul class="navbar">
-            <li class="navtitle"> <a class="FS-title">Felles-Skapet</a></li>
-            <li class="navbutton"> <a class="navlink" href="index.html">Forside</a> </li>
-            <li class="navbutton"> <a class="navlink" href="web-form.html">Form</a> </li>
-            <li class="navactive"> <a class="txtactive" href="web-rapport.html">Rapport</a> </li>
-        </ul>
+        <div class="navdiv">
+            <div>
+                <p class="FS-title">Felles-Skapet</p>
+            </div>
+            <ul class="navbar">
+                <li class="navbutton"> <a class="navlink" href="index.html">Forside</a> </li>
+                <li class="navbutton"> <a class="navlink" href="web-form.html">Form</a> </li>
+                <li class="navactive"> <a class="txtactive" href="web-rapport.html">Rapport</a> </li>
+            </ul>
+        </div>
 
         <div class="maincon">
 
             <!--SVG-element for å vise data fra JSON-->
             <h3 class="svg-overskrift">Spørsmålet</h3>
-            <svg xmlns="http://www.w3.org/2000/svg" height="100px" width="1200px" id="svg-placeholder" style='border: 1px solid black;'>
+            <svg xmlns="http://www.w3.org/2000/svg" height="200px" width="1200px" id="svg-placeholder" style='border: 1px solid black;'>
                 <rect width="1200px" height="50px" fill="lightblue"></rect>
-                <g>
-                    <text x="75" y="25">PlaceLeft</text>
-                    <text x="1050" y="25">PlaceRight</text>
+                <g class="svgtxt">
+                    <text x="100" y="25">PlaceLeft</text>
+                    <text x="100" y="40">0</text>
+
+                    <text x="600" y="40">50</text>
+
+                    <text x="1100" y="25">PlaceRight</text>
+                    <text x="1100" y="40">100</text>
                 </g>
 
                 <!--Horizontal linje-->
-                <line x1="100" y1="75" x2="1100" y2="75" style="stroke: black; stroke-width: 4"></line>
+                <line x1="100" y1="125" x2="1100" y2="125" style="stroke: black; stroke-width: 4"></line>
 
                 <!--Vertikale linjer-->
-                <line x1="100" y1="50" x2="100" y2="150" style="stroke: black; stroke-width: 2"></line>
-                <line x1="1100" y1="50" x2="1100" y2="150" style="stroke: black; stroke-width: 2"></line>
+                <line x1="100" y1="60" x2="100" y2="190" style="stroke: black; stroke-width: 2"></line>
+                <line x1="1100" y1="60" x2="1100" y2="190" style="stroke: black; stroke-width: 2"></line>
+
+                <line x1="600" y1="120" x2="600" y2="130" style="stroke: black; stroke-width: 2"></line>
+
             </svg>
 
 
@@ -45,34 +62,62 @@
         <script>
 
             //Funksjon for å tegne inn data på SVG
-            function TegnSVG (value, color, name, svgID) {
+            function DrawCir (value, name, color, svgID) {
                 const svg = document.getElementById(svgID);
                 const svgns =  "http://www.w3.org/2000/svg";
 
                 //setter x- og y-verdiene
                 let Xvalue = (parseInt(value)*10) + 100;
-                let Yvalue = 75;
+                let Yvalue = 125;
 
                 //lager sirkel
                 let circle = document.createElementNS (svgns, "circle");
-                    circle.setAttributeNS (null, 'x', Xvalue);
-                    circle.setAttributeNS (null, 'y', Yvalue);
-                    circle.setAttributeNS (null, 'r', 20);
+                    circle.setAttributeNS (null, 'cx', Xvalue);
+                    circle.setAttributeNS (null, 'cy', Yvalue);
+                    circle.setAttributeNS (null, 'r', 30);
                     circle.setAttributeNS (null, 'style', 'fill: ' + color);
+                    svg.appendChild(circle); //legger til i svg-elementet
 
                 //setter navn inni sirklen
                 let cirName = document.createElementNS (svgns, 'text');
                     cirName.setAttributeNS (null, 'x', Xvalue)
-                    cirName.setAttributeNS (null, 'y', Yvalue)
+                    cirName.setAttributeNS (null, 'y', Yvalue - 4)
+                    cirName.setAttributeNS (null, 'class', 'svgtxt')
                     cirName.textContent = name;
+                    svg.appendChild(cirName);
 
                 //setter verdien inni sirkelen
                 let cirValue = document.createElementNS (svgns, 'text');
                     cirValue.setAttributeNS (null, 'x', Xvalue)
-                    cirValue.setAttributeNS (null, 'y', Yvalue);
+                    cirValue.setAttributeNS (null, 'y', Yvalue + 12);
+                    cirValue.setAttributeNS (null, 'class', 'svgtxt')
                     cirValue.textContent = value;
+                    svg.appendChild(cirValue);
             }
 
+            let urls = [
+            'https://bacit.info/hwr/20221108113409-f467c01712c3ff293a374310a2eecbb1.json',
+            'https://bacit.info/hwr/20221108174617-192a5ecd5451e34141c1e7173f30f485.json'
+            ]
+
+            //Test Testsen
+            //time: "20221108113409"
+            //trxid: "f467c01712c3ff293a374310a2eecbb1"
+
+            //Test2 Testsen
+            //time: "20221108174617"
+            //trxid: "192a5ecd5451e34141c1e7173f30f485"
+
+            Promise.all(urls.map(url => fetch(url).then(response => response.json()))).then((data) => {
+                let Test = data[0];
+                let Test2 = data[1];
+    
+
+            document.getElementById('svg-placeholder');
+            DrawCir(Test.MNf, Test.fornavn, "yellow", "svg-placeholder");
+            DrawCir(Test2.MNf, Test2.fornavn, "red", "svg-placeholder");
+
+            });
         </script>
 
     </body>
