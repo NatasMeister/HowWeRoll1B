@@ -23,7 +23,7 @@
                 margin: 0 2% 0 2%;
             }
 
-            p {
+            .slidertxt {
                 width: 90px;
             }
 
@@ -48,12 +48,17 @@
     </head>
     <body>
         <!--Navbar-->
-        <ul class="navbar">
-            <li class="navtitle"> <a class="FS-title">Felles-Skapet</a></li>
-            <li class="navbutton"> <a class="navlink" href="index.html">Forside</a> </li>
-            <li class="navactive"> <a class="txtactive" href="web-form.html">Form</a> </li>
-            <li class="navbutton"> <a class="navlink" href="web-rapport.html">Rapport</a> </li>
-        </ul>
+        <div class="navdiv">
+            <div>
+                <p class="FS-title">Felles-Skapet</p>
+            </div>
+            <ul class="navbar">
+                <li class="navbutton"> <a class="navlink" href="index.html">Forside</a> </li>
+                <li class="navactive"> <a class="txtactive" href="web-form.html">Form</a> </li>
+                <li class="navbutton"> <a class="navlink" href="web-rapport.html">Rapport</a> </li>
+            </ul>
+        </div>
+        
         <div class="maincon">
             <form id="hwr">
                 <h1>Registrer deg</h1>
@@ -83,9 +88,9 @@
                     <table class="sliders">
                         <tr>
                             <div class="sliderdiv">
-                                <p>Morgenfugl</p>
+                                <p class="slidertxt">Morgenfugl</p>
                                 <input class="sliderz" name="MNf" type="range" min="0" max="100" value="50" id="slider"> 
-                                <p>Natteravn</p> 
+                                <p class="slidertxt">Natteravn</p> 
                             </div>   
                         </tr>
                     </table>
@@ -94,9 +99,9 @@
                     <table class="sliders">
                         <tr>
                             <div class="sliderdiv">
-                                <p>Samarbeid</p>
+                                <p class="slidertxt">Samarbeid</p>
                                 <input class="sliderz" name="SoA" type="range" min="0" max="100" value="50" id="slider"> 
-                                <p>Alene</p>
+                                <p class="slidertxt">Alene</p>
                             </div>    
                         </tr>
                     </table>
@@ -105,9 +110,9 @@
                     <table class="sliders">
                         <tr>
                             <div class="sliderdiv">
-                                <p>Bakhistorien</p>
+                                <p class="slidertxt">Bakhistorien</p>
                                 <input class="sliderz" name="BoP" type="range" min="0" max="100" value="50" id="slider"> 
-                                <p>Poenget</p>  
+                                <p class="slidertxt">Poenget</p>  
                             </div>  
                         </tr>
                     </table>
@@ -116,9 +121,9 @@
                     <table class="sliders">
                         <tr>
                             <div class="sliderdiv">
-                                <p>Snakke om ting</p>
+                                <p class="slidertxt">Snakke om ting</p>
                                 <input class="sliderz" name="SoV" type="range" min="0" max="100" value="50" id="slider">  
-                                <p>Gå videre</p>
+                                <p class="slidertxt">Gå videre</p>
                             </div>   
                         </tr>
                     </table>
@@ -127,9 +132,9 @@
                     <table class="sliders">
                         <tr>
                             <div class="sliderdiv">
-                                <p>Snakkemenneske</p>
+                                <p class="slidertxt">Snakkemenneske</p>
                                 <input class="sliderz" name="SoT" type="range" min="0" max="100" value="50" id="slider">
-                                <p>Tenkemenneske</p>
+                                <p class="slidertxt">Tenkemenneske</p>
                             </div>     
                         </tr>
                     </table>
@@ -138,9 +143,9 @@
                     <table class="sliders">
                         <tr>
                             <div class="sliderdiv">
-                                <p>Implusivt</p>
+                                <p class="slidertxt">Implusivt</p>
                                 <input class="sliderz" name="IoP" type="range" min="0" max="100" value="50" id="slider">
-                                <p>Planlagt</p>
+                                <p class="slidertxt">Planlagt</p>
                             </div>     
                         </tr>
                     </table>
@@ -149,9 +154,9 @@
                     <table class="sliders">
                         <tr>
                             <div class="sliderdiv">
-                                <p>Tekstmelding</p>
+                                <p class="slidertxt">Tekstmelding</p>
                                 <input class="sliderz" name="ToR" type="range" min="0" max="100" value="50" id="slider">
-                                <p>Ringt</p>
+                                <p class="slidertxt">Ringt</p>
                             </div>     
                         </tr>
                     </table>
@@ -160,9 +165,9 @@
                     <table class="sliders">
                         <tr>
                             <div class="sliderdiv">
-                                <p>Fast</p>
+                                <p class="slidertxt">Fast</p>
                                 <input class="sliderz" name="FoF" type="range" min="0" max="100" value="50" id="slider"> 
-                                <p>Fleksibel</p>
+                                <p class="slidertxt">Fleksibel</p>
                             </div>    
                         </tr>
                     </table>
@@ -171,9 +176,9 @@
                     <table class="sliders">
                         <tr>
                             <div class="sliderdiv">
-                                <p>Fysisk</p>
+                                <p class="slidertxt">Fysisk</p>
                                 <input class="sliderz" name="FoH" type="range" min="0" max="100" value="50" id="slider"> 
-                                <p>Hjemmekontor</p>
+                                <p class="slidertxt">Hjemmekontor</p>
                             </div>    
                         </tr>
                     </table>
@@ -182,9 +187,9 @@
                     <table class="sliders">
                         <tr>
                             <div class="sliderdiv">
-                                <p>Kreativ</p>
+                                <p class="slidertxt">Kreativ</p>
                                 <input class="sliderz" name="KoL" type="range" min="0" max="100" value="50" id="slider"> 
-                                <p>Logisk</p>
+                                <p class="slidertxt">Logisk</p>
                             </div>    
                         </tr>
                     </table>
@@ -193,9 +198,9 @@
                     <table class="sliders">
                         <tr>
                             <div class="sliderdiv">
-                                <p>Følge</p>
+                                <p class="slidertxt">Følge</p>
                                 <input class="sliderz" name="FoG" type="range" min="0" max="100" value="50" id="slider">  
-                                <p>Gi</p>
+                                <p class="slidertxt">Gi</p>
                             </div>   
                         </tr>
                     </table>
