@@ -212,6 +212,11 @@
                 </div>
 
             </form>
+            <br>
+            <div class="results">
+                <h3>Resultatene:</h3>
+                <pre></pre>
+            </div>
             
         </div>
 
@@ -240,9 +245,11 @@
             event.preventDefault();
             const data = new FormData(event.target);
             const JSONdata = Object.fromEntries(data.entries());
+            const results = document.querySelector('.results pre');
             postData('https://bacit.info', JSONdata)
         .then((data) => {
             console.log(data); // JSON data parsed by `data.json()` call
+            results.innerText = JSON.stringify(data, null, 2);
         });
     }
 
