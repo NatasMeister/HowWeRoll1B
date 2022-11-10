@@ -365,16 +365,14 @@
             'https://bacit.info/hwr/20221109140803-679077ef6957735f7278f24fe6bfd4a2.json',
             'https://bacit.info/hwr/20221110114032-64db7db52bd1995693916f215a0ce60d.json',
             'https://bacit.info/hwr/20221109142122-b3b96fa2ae88c968a19f256da7a6e38a.json',
-            'https://bacit.info/hwr/20221109140329-1b520c83a9ca3d0ba8af3bb05278ea43.json'
+            'https://bacit.info/hwr/20221109140329-1b520c83a9ca3d0ba8af3bb05278ea43.json',
             ]
 
-            //Test Testsen
-            //time: "20221108113409"
-            //trxid: "f467c01712c3ff293a374310a2eecbb1" 20221109135259 656895452ed10ba9b378ad70f9649eda
-
-            //Test2 Testsen
-            //time: "20221108174617"
-            //trxid: "192a5ecd5451e34141c1e7173f30f485"
+            //if (localStorage.trxid) {
+            //    localStorage.getItem(time);
+            //    localStorage.getItem(trxid);
+            //    urls.push('https://bacit.info/hwr/' + time + '-' + trxid + '.json');
+            //}
 
             //setter dataen fra JSON-fil urlene til gruppemedlemmer
             Promise.all(urls.map(url => fetch(url).then(response => response.json()))).then((data) => {
@@ -384,9 +382,12 @@
                 let Jonas = data[3];
                 let Majd = data[4];
                 let Sander = data[5];
-    
+
+                //if (localStorage.trxid) {
+                //    let Lokal = data[6];
+                //}
+            
             //Data inn i Morgenfugl-Natteravn
-            document.getElementById('svg-MNf');
             DrawCir(Ruben.MNf, Ruben.fornavn, "yellow", "svg-MNf");
             DrawCir(Mally.MNf, Mally.fornavn, "red", "svg-MNf");
             DrawCir(Niklas.MNf, Niklas.fornavn, "purple", "svg-MNf")
@@ -394,8 +395,11 @@
             DrawCir(Majd.MNf, Majd.fornavn, "orange", "svg-MNf")
             DrawCir(Sander.MNf, Sander.fornavn, "blue", "svg-MNf")
 
+            //if (localStorage.trxid) {
+            //    DrawCir(Lokal.MNf, Lokal.fornavn, "pink", "svg-MNf")
+            //}
+
             //Data inn i Samarbeid-Alene
-            document.getElementById('svg-SoA');
             DrawCir(Ruben.SoA, Ruben.fornavn, "yellow", "svg-SoA");
             DrawCir(Mally.SoA, Mally.fornavn, "red", "svg-SoA");
             DrawCir(Niklas.SoA, Niklas.fornavn, "purple", "svg-SoA")
@@ -403,8 +407,11 @@
             DrawCir(Majd.SoA, Majd.fornavn, "orange", "svg-SoA")
             DrawCir(Sander.SoA, Sander.fornavn, "blue", "svg-SoA")
 
+            //if (localStorage.trxid) {
+            //    DrawCir(Lokal.SoA, Lokal.fornavn, "pink", "svg-SoA")
+            //}
+
             //Data inn i Bakhistorie-Poenget
-            document.getElementById('svg-BoP');
             DrawCir(Ruben.BoP, Ruben.fornavn, "yellow", "svg-BoP");
             DrawCir(Mally.BoP, Mally.fornavn, "red", "svg-BoP");
             DrawCir(Niklas.BoP, Niklas.fornavn, "purple", "svg-BoP")
@@ -412,17 +419,23 @@
             DrawCir(Majd.BoP, Majd.fornavn, "orange", "svg-BoP")
             DrawCir(Sander.BoP, Sander.fornavn, "blue", "svg-BoP")
 
+            //if (localStorage.trxid) {
+            //    DrawCir(Lokal.BoP, Lokal.fornavn, "pink", "svg-BoP")
+            //}
+
             //Data inn i Snakke-Gå videre
-            document.getElementById('svg-SoV');
             DrawCir(Ruben.SoV, Ruben.fornavn, "yellow", "svg-SoV");
             DrawCir(Mally.SoV, Mally.fornavn, "red", "svg-SoV");
             DrawCir(Niklas.SoV, Niklas.fornavn, "purple", "svg-SoV")
             DrawCir(Jonas.SoV, Jonas.fornavn, "green", "svg-SoV")
             DrawCir(Majd.SoV, Majd.fornavn, "orange", "svg-SoV")
             DrawCir(Sander.SoV, Sander.fornavn, "blue", "svg-SoV")
+
+            //if (localStorage.trxid) {
+            //    DrawCir(Lokal.SoV, Lokal.fornavn, "pink", "svg-SoV")
+            //}
             
             //Data inn i Snakkemenneske-Tenkemenneske
-            document.getElementById('svg-SoT');
             DrawCir(Ruben.SoT, Ruben.fornavn, "yellow", "svg-SoT");
             DrawCir(Mally.SoT, Mally.fornavn, "red", "svg-SoT");
             DrawCir(Niklas.SoT, Niklas.fornavn, "purple", "svg-SoT")
@@ -430,8 +443,11 @@
             DrawCir(Majd.SoT, Majd.fornavn, "orange", "svg-SoT")
             DrawCir(Sander.SoT, Sander.fornavn, "blue", "svg-SoT")
 
+            //if (localStorage.trxid) {
+            //    DrawCir(Lokal.SoT, Lokal.fornavn, "pink", "svg-SoT")
+            //}
+
             //Data inn i Impulsivt-Planlagt
-            document.getElementById('svg-IoP');
             DrawCir(Ruben.IoP, Ruben.fornavn, "yellow", "svg-IoP");
             DrawCir(Mally.IoP, Mally.fornavn, "red", "svg-IoP");
             DrawCir(Niklas.IoP, Niklas.fornavn, "purple", "svg-IoP")
@@ -439,8 +455,11 @@
             DrawCir(Majd.IoP, Majd.fornavn, "orange", "svg-IoP")
             DrawCir(Sander.IoP, Sander.fornavn, "blue", "svg-IoP")
 
+            //if (localStorage.trxid) {
+            //    DrawCir(Lokal.IoP, Lokal.fornavn, "pink", "svg-IoP")
+            //}
+
             //Data inn i Tekstmelding-ringt
-            document.getElementById('svg-ToR');
             DrawCir(Ruben.ToR, Ruben.fornavn, "yellow", "svg-ToR");
             DrawCir(Mally.ToR, Mally.fornavn, "red", "svg-ToR");
             DrawCir(Niklas.ToR, Niklas.fornavn, "purple", "svg-ToR")
@@ -448,8 +467,11 @@
             DrawCir(Majd.ToR, Majd.fornavn, "orange", "svg-ToR")
             DrawCir(Sander.ToR, Sander.fornavn, "blue", "svg-ToR")
 
+            //if (localStorage.trxid) {
+            //    DrawCir(Lokal.ToR, Lokal.fornavn, "pink", "svg-ToR")
+            //}
+
             //Data inn i Fast-Fleksibel
-            document.getElementById('svg-FoF');
             DrawCir(Ruben.FoF, Ruben.fornavn, "yellow", "svg-FoF");
             DrawCir(Mally.FoF, Mally.fornavn, "red", "svg-FoF");
             DrawCir(Niklas.FoF, Niklas.fornavn, "purple", "svg-FoF")
@@ -457,8 +479,11 @@
             DrawCir(Majd.FoF, Majd.fornavn, "orange", "svg-FoF")
             DrawCir(Sander.FoF, Sander.fornavn, "blue", "svg-FoF")
 
+            //if (localStorage.trxid) {
+            //    DrawCir(Lokal.FoF, Lokal.fornavn, "pink", "svg-FoF")
+            //}
+
             //Data inn i Fysisk-Hjemmekontor
-            document.getElementById('svg-FoH');
             DrawCir(Ruben.FoH, Ruben.fornavn, "yellow", "svg-FoH");
             DrawCir(Mally.FoH, Mally.fornavn, "red", "svg-FoH");
             DrawCir(Niklas.FoH, Niklas.fornavn, "purple", "svg-FoH")
@@ -466,8 +491,11 @@
             DrawCir(Majd.FoH, Majd.fornavn, "orange", "svg-FoH")
             DrawCir(Sander.FoH, Sander.fornavn, "blue", "svg-FoH")
 
+            //if (localStorage.trxid) {
+            //    DrawCir(Lokal.FoH, Lokal.fornavn, "pink", "svg-FoH")
+            //}
+
             //Data inn i Kreativ-Logisk
-            document.getElementById('svg-KoL');
             DrawCir(Ruben.KoL, Ruben.fornavn, "yellow", "svg-KoL");
             DrawCir(Mally.KoL, Mally.fornavn, "red", "svg-KoL");
             DrawCir(Niklas.KoL, Niklas.fornavn, "purple", "svg-KoL")
@@ -475,14 +503,22 @@
             DrawCir(Majd.KoL, Majd.fornavn, "orange", "svg-KoL")
             DrawCir(Sander.KoL, Sander.fornavn, "blue", "svg-KoL")
 
+            //if (localStorage.trxid) {
+            //    DrawCir(Lokal.KoL, Lokal.fornavn, "pink", "svg-KoL")
+            //}
+
             //Data inn i Følge-Gi
-            document.getElementById('svg-FoG');
             DrawCir(Ruben.FoG, Ruben.fornavn, "yellow", "svg-FoG");
             DrawCir(Mally.FoG, Mally.fornavn, "red", "svg-FoG");
             DrawCir(Niklas.FoG, Niklas.fornavn, "purple", "svg-FoG")
             DrawCir(Jonas.FoG, Jonas.fornavn, "green", "svg-FoG")
             DrawCir(Majd.FoG, Majd.fornavn, "orange", "svg-FoG")
             DrawCir(Sander.FoG, Sander.fornavn, "blue", "svg-FoG")
+
+            //if (localStorage.trxid) {
+            //    DrawCir(Lokal.FoG, Lokal.fornavn, "pink", "svg-FoG")
+            //}
+
             });
         </script>
 
