@@ -252,11 +252,7 @@
             console.log(data); // JSON data parsed by `data.json()` call
             results.innerText = JSON.stringify(data, null, 2);
 
-            //lagrer trxid-en og time-en som variabler og lagrer de lokalt
-            let trxid = JSON.stringify(data.trxid, null, 2).replace(/"/g, "");
-            let time = JSON.stringify(data.time, null, 2).replace(/"/g, "");
-            localStorage.setItem("trxid", trxid);
-            localStorage.setItem("time", time);
+            //må finne en måte å bruke localStorage med trxid-en og time-en
         });
     }
 
