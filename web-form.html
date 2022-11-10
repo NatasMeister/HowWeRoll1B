@@ -243,6 +243,7 @@
 
         function PostForm(event) {
             event.preventDefault();
+            alert("Takk for at du registrerte deg!");
             const data = new FormData(event.target);
             const JSONdata = Object.fromEntries(data.entries());
             const results = document.querySelector('.results pre');
@@ -250,6 +251,12 @@
         .then((data) => {
             console.log(data); // JSON data parsed by `data.json()` call
             results.innerText = JSON.stringify(data, null, 2);
+
+            //lagrer trxid-en og time-en som variabler og lagrer de lokalt
+            let trxid = JSON.stringify(data.trxid, null, 2).replace(/"/g, "");
+            let time = JSON.stringify(data.time, null, 2).replace(/"/g, "");
+            localStorage.setItem("trxid", trxid);
+            localStorage.setItem("time", time);
         });
     }
 
