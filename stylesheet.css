@@ -78,3 +78,19 @@ body {
     margin: -20px;
     color: darkgrey;
 }
+
+/*Fikser spacing mellom visittkort og telefonnummeret og emailen*/
+
+.cardrow .card:first-child {
+    margin-right: 95px;
+  }
+  
+  .cardrow .card:last-child {
+    margin-left: 95px;
+  }
+
+  .cardrow .card .body li {
+    margin-bottom: 60px;
+  }
+  
+  
