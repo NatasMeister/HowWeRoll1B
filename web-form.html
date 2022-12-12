@@ -212,6 +212,11 @@
                 </div>
 
             </form>
+            <br>
+            <div class="results">
+                <h3>Resultatene:</h3>
+                <pre></pre>
+            </div>
             
         </div>
 
@@ -238,19 +243,22 @@
 
         function PostForm(event) {
             event.preventDefault();
+            alert("Takk for at du registrerte deg!");
             const data = new FormData(event.target);
             const JSONdata = Object.fromEntries(data.entries());
+            const results = document.querySelector('.results pre');
             postData('https://bacit.info', JSONdata)
         .then((data) => {
             console.log(data); // JSON data parsed by `data.json()` call
+            results.innerText = JSON.stringify(data, null, 2);
+
+            localStorage.setItem('local_trxid', data.trxid);
+            localStorage.setItem('local_time', data.time);
         });
     }
 
-        const form = document.querySelector('form');
+    const form = document.querySelector('form');
         form.addEventListener('submit', PostForm);
-        //function PostForm() {
-        //    alert("Bro")
-        //}
 
         </script>
        

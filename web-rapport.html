@@ -8,11 +8,15 @@
         <style>
             .svg-overskrift {
                 text-align: center;
-                margin-right: 6%
             }
 
             .svgtxt {
                 text-anchor: middle;
+            }
+
+            .cirtxt {
+                text-anchor: middle;
+                font-size: 12px;
             }
         </style>
     </head>
@@ -32,16 +36,276 @@
         <div class="maincon">
 
             <!--SVG-element for å vise data fra JSON-->
-            <h3 class="svg-overskrift">Spørsmålet</h3>
-            <svg xmlns="http://www.w3.org/2000/svg" height="200px" width="1200px" id="svg-placeholder" style='border: 1px solid black;'>
+            <h3 class="svg-overskrift">Er du en morgenfugl eller en natteravn?</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" height="200px" width="1200px" id="svg-MNf" style='border: 1px solid black;'>
                 <rect width="1200px" height="50px" fill="lightblue"></rect>
                 <g class="svgtxt">
-                    <text x="100" y="25">PlaceLeft</text>
+                    <text x="100" y="25">Morgenfugl</text>
                     <text x="100" y="40">0</text>
 
                     <text x="600" y="40">50</text>
 
-                    <text x="1100" y="25">PlaceRight</text>
+                    <text x="1100" y="25">Natteravn</text>
+                    <text x="1100" y="40">100</text>
+                </g>
+
+                <!--Horizontal linje-->
+                <line x1="100" y1="125" x2="1100" y2="125" style="stroke: black; stroke-width: 4"></line>
+
+                <!--Vertikale linjer-->
+                <line x1="100" y1="60" x2="100" y2="190" style="stroke: black; stroke-width: 2"></line>
+                <line x1="1100" y1="60" x2="1100" y2="190" style="stroke: black; stroke-width: 2"></line>
+
+                <line x1="600" y1="120" x2="600" y2="130" style="stroke: black; stroke-width: 2"></line>
+
+            </svg>
+
+            <br><br><br><br>
+
+            <h3 class="svg-overskrift">Foretrekker du samarbeid eller jobbe alene?</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" height="200px" width="1200px" id="svg-SoA" style='border: 1px solid black;'>
+                <rect width="1200px" height="50px" fill="lightblue"></rect>
+                <g class="svgtxt">
+                    <text x="100" y="25">Samarbeid</text>
+                    <text x="100" y="40">0</text>
+
+                    <text x="600" y="40">50</text>
+
+                    <text x="1100" y="25">Alene</text>
+                    <text x="1100" y="40">100</text>
+                </g>
+
+                <!--Horizontal linje-->
+                <line x1="100" y1="125" x2="1100" y2="125" style="stroke: black; stroke-width: 4"></line>
+
+                <!--Vertikale linjer-->
+                <line x1="100" y1="60" x2="100" y2="190" style="stroke: black; stroke-width: 2"></line>
+                <line x1="1100" y1="60" x2="1100" y2="190" style="stroke: black; stroke-width: 2"></line>
+
+                <line x1="600" y1="120" x2="600" y2="130" style="stroke: black; stroke-width: 2"></line>
+
+            </svg>
+
+            <br><br><br><br>
+
+            <h3 class="svg-overskrift">Foretrekker du å høre bakhistorien eller komme rett til poenget?</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" height="200px" width="1200px" id="svg-BoP" style='border: 1px solid black;'>
+                <rect width="1200px" height="50px" fill="lightblue"></rect>
+                <g class="svgtxt">
+                    <text x="100" y="25">Bakhistorien</text>
+                    <text x="100" y="40">0</text>
+
+                    <text x="600" y="40">50</text>
+
+                    <text x="1100" y="25">Poenget</text>
+                    <text x="1100" y="40">100</text>
+                </g>
+
+                <!--Horizontal linje-->
+                <line x1="100" y1="125" x2="1100" y2="125" style="stroke: black; stroke-width: 4"></line>
+
+                <!--Vertikale linjer-->
+                <line x1="100" y1="60" x2="100" y2="190" style="stroke: black; stroke-width: 2"></line>
+                <line x1="1100" y1="60" x2="1100" y2="190" style="stroke: black; stroke-width: 2"></line>
+
+                <line x1="600" y1="120" x2="600" y2="130" style="stroke: black; stroke-width: 2"></line>
+
+            </svg>
+
+            <br><br><br><br>
+                        
+            <h3 class="svg-overskrift">Føler du behov for å snakke om ting eller å gå videre?</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" height="200px" width="1200px" id="svg-SoV" style='border: 1px solid black;'>
+                <rect width="1200px" height="50px" fill="lightblue"></rect>
+                <g class="svgtxt">
+                    <text x="100" y="25">Snakke om ting</text>
+                    <text x="100" y="40">0</text>
+
+                    <text x="600" y="40">50</text>
+
+                    <text x="1100" y="25">Gå videre</text>
+                    <text x="1100" y="40">100</text>
+                </g>
+
+                <!--Horizontal linje-->
+                <line x1="100" y1="125" x2="1100" y2="125" style="stroke: black; stroke-width: 4"></line>
+
+                <!--Vertikale linjer-->
+                <line x1="100" y1="60" x2="100" y2="190" style="stroke: black; stroke-width: 2"></line>
+                <line x1="1100" y1="60" x2="1100" y2="190" style="stroke: black; stroke-width: 2"></line>
+
+                <line x1="600" y1="120" x2="600" y2="130" style="stroke: black; stroke-width: 2"></line>
+
+            </svg>
+
+            <br><br><br><br>
+                        
+            <h3 class="svg-overskrift">Er du et snakkemenneske eller et tenkemenneske?</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" height="200px" width="1200px" id="svg-SoT" style='border: 1px solid black;'>
+                <rect width="1200px" height="50px" fill="lightblue"></rect>
+                <g class="svgtxt">
+                    <text x="100" y="25">Snakkemenneske</text>
+                    <text x="100" y="40">0</text>
+
+                    <text x="600" y="40">50</text>
+
+                    <text x="1100" y="25">Tenkemenneske</text>
+                    <text x="1100" y="40">100</text>
+                </g>
+
+                <!--Horizontal linje-->
+                <line x1="100" y1="125" x2="1100" y2="125" style="stroke: black; stroke-width: 4"></line>
+
+                <!--Vertikale linjer-->
+                <line x1="100" y1="60" x2="100" y2="190" style="stroke: black; stroke-width: 2"></line>
+                <line x1="1100" y1="60" x2="1100" y2="190" style="stroke: black; stroke-width: 2"></line>
+
+                <line x1="600" y1="120" x2="600" y2="130" style="stroke: black; stroke-width: 2"></line>
+
+            </svg>
+
+            <br><br><br><br>
+                        
+            <h3 class="svg-overskrift">Foretrekker du en impulsiv hverdag eller planlagt hverdag?</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" height="200px" width="1200px" id="svg-IoP" style='border: 1px solid black;'>
+                <rect width="1200px" height="50px" fill="lightblue"></rect>
+                <g class="svgtxt">
+                    <text x="100" y="25">Impulsivt</text>
+                    <text x="100" y="40">0</text>
+
+                    <text x="600" y="40">50</text>
+
+                    <text x="1100" y="25">Planlagt</text>
+                    <text x="1100" y="40">100</text>
+                </g>
+
+                <!--Horizontal linje-->
+                <line x1="100" y1="125" x2="1100" y2="125" style="stroke: black; stroke-width: 4"></line>
+
+                <!--Vertikale linjer-->
+                <line x1="100" y1="60" x2="100" y2="190" style="stroke: black; stroke-width: 2"></line>
+                <line x1="1100" y1="60" x2="1100" y2="190" style="stroke: black; stroke-width: 2"></line>
+
+                <line x1="600" y1="120" x2="600" y2="130" style="stroke: black; stroke-width: 2"></line>
+
+            </svg>
+
+            <br><br><br><br>
+                        
+            <h3 class="svg-overskrift">Foretrekker du å motta tekstmelding eller å bli ringt?</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" height="200px" width="1200px" id="svg-ToR" style='border: 1px solid black;'>
+                <rect width="1200px" height="50px" fill="lightblue"></rect>
+                <g class="svgtxt">
+                    <text x="100" y="25">Tekstmelding</text>
+                    <text x="100" y="40">0</text>
+
+                    <text x="600" y="40">50</text>
+
+                    <text x="1100" y="25">Ringt</text>
+                    <text x="1100" y="40">100</text>
+                </g>
+
+                <!--Horizontal linje-->
+                <line x1="100" y1="125" x2="1100" y2="125" style="stroke: black; stroke-width: 4"></line>
+
+                <!--Vertikale linjer-->
+                <line x1="100" y1="60" x2="100" y2="190" style="stroke: black; stroke-width: 2"></line>
+                <line x1="1100" y1="60" x2="1100" y2="190" style="stroke: black; stroke-width: 2"></line>
+
+                <line x1="600" y1="120" x2="600" y2="130" style="stroke: black; stroke-width: 2"></line>
+
+            </svg>
+
+            <br><br><br><br>
+                        
+            <h3 class="svg-overskrift">Foretrekker du fast- eller fleksibel arbeidstid?</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" height="200px" width="1200px" id="svg-FoF" style='border: 1px solid black;'>
+                <rect width="1200px" height="50px" fill="lightblue"></rect>
+                <g class="svgtxt">
+                    <text x="100" y="25">Fast</text>
+                    <text x="100" y="40">0</text>
+
+                    <text x="600" y="40">50</text>
+
+                    <text x="1100" y="25">Fleksibel</text>
+                    <text x="1100" y="40">100</text>
+                </g>
+
+                <!--Horizontal linje-->
+                <line x1="100" y1="125" x2="1100" y2="125" style="stroke: black; stroke-width: 4"></line>
+
+                <!--Vertikale linjer-->
+                <line x1="100" y1="60" x2="100" y2="190" style="stroke: black; stroke-width: 2"></line>
+                <line x1="1100" y1="60" x2="1100" y2="190" style="stroke: black; stroke-width: 2"></line>
+
+                <line x1="600" y1="120" x2="600" y2="130" style="stroke: black; stroke-width: 2"></line>
+
+            </svg>
+
+            <br><br><br><br>
+                        
+            <h3 class="svg-overskrift">Foretrekker du fysisk oppmøte eller hjemmekontor?</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" height="200px" width="1200px" id="svg-FoH" style='border: 1px solid black;'>
+                <rect width="1200px" height="50px" fill="lightblue"></rect>
+                <g class="svgtxt">
+                    <text x="100" y="25">Fysisk</text>
+                    <text x="100" y="40">0</text>
+
+                    <text x="600" y="40">50</text>
+
+                    <text x="1100" y="25">Hjemmekontor</text>
+                    <text x="1100" y="40">100</text>
+                </g>
+
+                <!--Horizontal linje-->
+                <line x1="100" y1="125" x2="1100" y2="125" style="stroke: black; stroke-width: 4"></line>
+
+                <!--Vertikale linjer-->
+                <line x1="100" y1="60" x2="100" y2="190" style="stroke: black; stroke-width: 2"></line>
+                <line x1="1100" y1="60" x2="1100" y2="190" style="stroke: black; stroke-width: 2"></line>
+
+                <line x1="600" y1="120" x2="600" y2="130" style="stroke: black; stroke-width: 2"></line>
+
+            </svg>
+
+            <br><br><br><br>
+                        
+            <h3 class="svg-overskrift">Er du en kreativ- eller logisk tenker?</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" height="200px" width="1200px" id="svg-KoL" style='border: 1px solid black;'>
+                <rect width="1200px" height="50px" fill="lightblue"></rect>
+                <g class="svgtxt">
+                    <text x="100" y="25">Kreativ</text>
+                    <text x="100" y="40">0</text>
+
+                    <text x="600" y="40">50</text>
+
+                    <text x="1100" y="25">Logisk</text>
+                    <text x="1100" y="40">100</text>
+                </g>
+
+                <!--Horizontal linje-->
+                <line x1="100" y1="125" x2="1100" y2="125" style="stroke: black; stroke-width: 4"></line>
+
+                <!--Vertikale linjer-->
+                <line x1="100" y1="60" x2="100" y2="190" style="stroke: black; stroke-width: 2"></line>
+                <line x1="1100" y1="60" x2="1100" y2="190" style="stroke: black; stroke-width: 2"></line>
+
+                <line x1="600" y1="120" x2="600" y2="130" style="stroke: black; stroke-width: 2"></line>
+
+            </svg>
+
+            <br><br><br><br>
+                        
+            <h3 class="svg-overskrift">Foretrekker du å følge eller gi instruksjoner?</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" height="200px" width="1200px" id="svg-FoG" style='border: 1px solid black;'>
+                <rect width="1200px" height="50px" fill="lightblue"></rect>
+                <g class="svgtxt">
+                    <text x="100" y="25">Følge</text>
+                    <text x="100" y="40">0</text>
+
+                    <text x="600" y="40">50</text>
+
+                    <text x="1100" y="25">Gi</text>
                     <text x="1100" y="40">100</text>
                 </g>
 
@@ -74,7 +338,7 @@
                 let circle = document.createElementNS (svgns, "circle");
                     circle.setAttributeNS (null, 'cx', Xvalue);
                     circle.setAttributeNS (null, 'cy', Yvalue);
-                    circle.setAttributeNS (null, 'r', 30);
+                    circle.setAttributeNS (null, 'r', 22.5);
                     circle.setAttributeNS (null, 'style', 'fill: ' + color);
                     svg.appendChild(circle); //legger til i svg-elementet
 
@@ -82,7 +346,7 @@
                 let cirName = document.createElementNS (svgns, 'text');
                     cirName.setAttributeNS (null, 'x', Xvalue)
                     cirName.setAttributeNS (null, 'y', Yvalue - 4)
-                    cirName.setAttributeNS (null, 'class', 'svgtxt')
+                    cirName.setAttributeNS (null, 'class', 'cirtxt')
                     cirName.textContent = name;
                     svg.appendChild(cirName);
 
@@ -90,32 +354,150 @@
                 let cirValue = document.createElementNS (svgns, 'text');
                     cirValue.setAttributeNS (null, 'x', Xvalue)
                     cirValue.setAttributeNS (null, 'y', Yvalue + 12);
-                    cirValue.setAttributeNS (null, 'class', 'svgtxt')
+                    cirValue.setAttributeNS (null, 'class', 'cirtxt')
                     cirValue.textContent = value;
                     svg.appendChild(cirValue);
             }
 
             let urls = [
-            'https://bacit.info/hwr/20221108113409-f467c01712c3ff293a374310a2eecbb1.json',
-            'https://bacit.info/hwr/20221108174617-192a5ecd5451e34141c1e7173f30f485.json'
+            'https://bacit.info/hwr/20221109135259-656895452ed10ba9b378ad70f9649eda.json',
+            'https://bacit.info/hwr/20221109140337-580336782a9f32d6911364f4382273c7.json',
+            'https://bacit.info/hwr/20221109140803-679077ef6957735f7278f24fe6bfd4a2.json',
+            'https://bacit.info/hwr/20221110114032-64db7db52bd1995693916f215a0ce60d.json',
+            'https://bacit.info/hwr/20221109142122-b3b96fa2ae88c968a19f256da7a6e38a.json',
+            'https://bacit.info/hwr/20221109140329-1b520c83a9ca3d0ba8af3bb05278ea43.json',
             ]
 
-            //Test Testsen
-            //time: "20221108113409"
-            //trxid: "f467c01712c3ff293a374310a2eecbb1"
+            if (localStorage.local_trxid) {
+            const trxid = localStorage.getItem('local_trxid');
+            const time = localStorage.getItem('local_time');
+                urls.push('https://bacit.info/hwr/' + time + '-' + trxid + '.json');
+            }
 
-            //Test2 Testsen
-            //time: "20221108174617"
-            //trxid: "192a5ecd5451e34141c1e7173f30f485"
-
+            //setter dataen fra JSON-fil urlene til gruppemedlemmer
             Promise.all(urls.map(url => fetch(url).then(response => response.json()))).then((data) => {
-                let Test = data[0];
-                let Test2 = data[1];
-    
+                let Ruben = data[0];
+                let Mally = data[1];
+                let Niklas = data[2];
+                let Jonas = data[3];
+                let Majd = data[4];
+                let Sander = data[5];
 
-            document.getElementById('svg-placeholder');
-            DrawCir(Test.MNf, Test.fornavn, "yellow", "svg-placeholder");
-            DrawCir(Test2.MNf, Test2.fornavn, "red", "svg-placeholder");
+                let Lokal = {}; // default value
+                if (localStorage.local_trxid) {
+                    Lokal = data[6];
+                }
+
+
+            //Data inn i Morgenfugl-Natteravn
+            DrawCir(Ruben.MNf, Ruben.fornavn, "yellow", "svg-MNf");
+            DrawCir(Mally.MNf, Mally.fornavn, "red", "svg-MNf");
+            DrawCir(Niklas.MNf, Niklas.fornavn, "purple", "svg-MNf")
+            DrawCir(Jonas.MNf, Jonas.fornavn, "green", "svg-MNf")
+            DrawCir(Majd.MNf, Majd.fornavn, "orange", "svg-MNf")
+            DrawCir(Sander.MNf, Sander.fornavn, "blue", "svg-MNf")
+
+            DrawCir(Lokal.MNf, Lokal.fornavn, "pink", "svg-MNf")
+
+            //Data inn i Samarbeid-Alene
+            DrawCir(Ruben.SoA, Ruben.fornavn, "yellow", "svg-SoA");
+            DrawCir(Mally.SoA, Mally.fornavn, "red", "svg-SoA");
+            DrawCir(Niklas.SoA, Niklas.fornavn, "purple", "svg-SoA")
+            DrawCir(Jonas.SoA, Jonas.fornavn, "green", "svg-SoA")
+            DrawCir(Majd.SoA, Majd.fornavn, "orange", "svg-SoA")
+            DrawCir(Sander.SoA, Sander.fornavn, "blue", "svg-SoA")
+
+            DrawCir(Lokal.SoA, Lokal.fornavn, "pink", "svg-SoA")
+
+            //Data inn i Bakhistorie-Poenget
+            DrawCir(Ruben.BoP, Ruben.fornavn, "yellow", "svg-BoP");
+            DrawCir(Mally.BoP, Mally.fornavn, "red", "svg-BoP");
+            DrawCir(Niklas.BoP, Niklas.fornavn, "purple", "svg-BoP")
+            DrawCir(Jonas.BoP, Jonas.fornavn, "green", "svg-BoP")
+            DrawCir(Majd.BoP, Majd.fornavn, "orange", "svg-BoP")
+            DrawCir(Sander.BoP, Sander.fornavn, "blue", "svg-BoP")
+
+            DrawCir(Lokal.BoP, Lokal.fornavn, "pink", "svg-BoP")
+
+            //Data inn i Snakke-Gå videre
+            DrawCir(Ruben.SoV, Ruben.fornavn, "yellow", "svg-SoV");
+            DrawCir(Mally.SoV, Mally.fornavn, "red", "svg-SoV");
+            DrawCir(Niklas.SoV, Niklas.fornavn, "purple", "svg-SoV")
+            DrawCir(Jonas.SoV, Jonas.fornavn, "green", "svg-SoV")
+            DrawCir(Majd.SoV, Majd.fornavn, "orange", "svg-SoV")
+            DrawCir(Sander.SoV, Sander.fornavn, "blue", "svg-SoV")
+
+            DrawCir(Lokal.SoV, Lokal.fornavn, "pink", "svg-SoV")
+            
+            //Data inn i Snakkemenneske-Tenkemenneske
+            DrawCir(Ruben.SoT, Ruben.fornavn, "yellow", "svg-SoT");
+            DrawCir(Mally.SoT, Mally.fornavn, "red", "svg-SoT");
+            DrawCir(Niklas.SoT, Niklas.fornavn, "purple", "svg-SoT")
+            DrawCir(Jonas.SoT, Jonas.fornavn, "green", "svg-SoT")
+            DrawCir(Majd.SoT, Majd.fornavn, "orange", "svg-SoT")
+            DrawCir(Sander.SoT, Sander.fornavn, "blue", "svg-SoT")
+
+            DrawCir(Lokal.SoT, Lokal.fornavn, "pink", "svg-SoT")
+
+            //Data inn i Impulsivt-Planlagt
+            DrawCir(Ruben.IoP, Ruben.fornavn, "yellow", "svg-IoP");
+            DrawCir(Mally.IoP, Mally.fornavn, "red", "svg-IoP");
+            DrawCir(Niklas.IoP, Niklas.fornavn, "purple", "svg-IoP")
+            DrawCir(Jonas.IoP, Jonas.fornavn, "green", "svg-IoP")
+            DrawCir(Majd.IoP, Majd.fornavn, "orange", "svg-IoP")
+            DrawCir(Sander.IoP, Sander.fornavn, "blue", "svg-IoP")
+
+            DrawCir(Lokal.IoP, Lokal.fornavn, "pink", "svg-IoP") 
+
+            //Data inn i Tekstmelding-ringt
+            DrawCir(Ruben.ToR, Ruben.fornavn, "yellow", "svg-ToR");
+            DrawCir(Mally.ToR, Mally.fornavn, "red", "svg-ToR");
+            DrawCir(Niklas.ToR, Niklas.fornavn, "purple", "svg-ToR")
+            DrawCir(Jonas.ToR, Jonas.fornavn, "green", "svg-ToR")
+            DrawCir(Majd.ToR, Majd.fornavn, "orange", "svg-ToR")
+            DrawCir(Sander.ToR, Sander.fornavn, "blue", "svg-ToR")
+
+            DrawCir(Lokal.ToR, Lokal.fornavn, "pink", "svg-ToR")
+
+            //Data inn i Fast-Fleksibel
+            DrawCir(Ruben.FoF, Ruben.fornavn, "yellow", "svg-FoF");
+            DrawCir(Mally.FoF, Mally.fornavn, "red", "svg-FoF");
+            DrawCir(Niklas.FoF, Niklas.fornavn, "purple", "svg-FoF")
+            DrawCir(Jonas.FoF, Jonas.fornavn, "green", "svg-FoF")
+            DrawCir(Majd.FoF, Majd.fornavn, "orange", "svg-FoF")
+            DrawCir(Sander.FoF, Sander.fornavn, "blue", "svg-FoF")
+
+            DrawCir(Lokal.FoF, Lokal.fornavn, "pink", "svg-FoF") 
+
+            //Data inn i Fysisk-Hjemmekontor
+            DrawCir(Ruben.FoH, Ruben.fornavn, "yellow", "svg-FoH");
+            DrawCir(Mally.FoH, Mally.fornavn, "red", "svg-FoH");
+            DrawCir(Niklas.FoH, Niklas.fornavn, "purple", "svg-FoH")
+            DrawCir(Jonas.FoH, Jonas.fornavn, "green", "svg-FoH")
+            DrawCir(Majd.FoH, Majd.fornavn, "orange", "svg-FoH")
+            DrawCir(Sander.FoH, Sander.fornavn, "blue", "svg-FoH")
+           
+            DrawCir(Lokal.FoH, Lokal.fornavn, "pink", "svg-FoH")           
+
+            //Data inn i Kreativ-Logisk
+            DrawCir(Ruben.KoL, Ruben.fornavn, "yellow", "svg-KoL");
+            DrawCir(Mally.KoL, Mally.fornavn, "red", "svg-KoL");
+            DrawCir(Niklas.KoL, Niklas.fornavn, "purple", "svg-KoL")
+            DrawCir(Jonas.KoL, Jonas.fornavn, "green", "svg-KoL")
+            DrawCir(Majd.KoL, Majd.fornavn, "orange", "svg-KoL")
+            DrawCir(Sander.KoL, Sander.fornavn, "blue", "svg-KoL")
+
+            DrawCir(Lokal.KoL, Lokal.fornavn, "pink", "svg-KoL")
+
+            //Data inn i Følge-Gi
+            DrawCir(Ruben.FoG, Ruben.fornavn, "yellow", "svg-FoG");
+            DrawCir(Mally.FoG, Mally.fornavn, "red", "svg-FoG");
+            DrawCir(Niklas.FoG, Niklas.fornavn, "purple", "svg-FoG")
+            DrawCir(Jonas.FoG, Jonas.fornavn, "green", "svg-FoG")
+            DrawCir(Majd.FoG, Majd.fornavn, "orange", "svg-FoG")
+            DrawCir(Sander.FoG, Sander.fornavn, "blue", "svg-FoG")
+
+            DrawCir(Lokal.FoG, Lokal.fornavn, "pink", "svg-FoG")
 
             });
         </script>
