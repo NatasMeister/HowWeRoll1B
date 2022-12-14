@@ -331,43 +331,45 @@
                 const svgns =  "http://www.w3.org/2000/svg";
 
                 //setter x- og y-verdiene
-                let Xvalue = (parseInt(value)*10) + 100;
+                let Xvalue = (parseInt(value)*10) + 100; //Justeres basert på størrelsen på SVG-elementet
                 let Yvalue = 125;
 
                 //lager sirkel
                 let circle = document.createElementNS (svgns, "circle");
-                    circle.setAttributeNS (null, 'cx', Xvalue);
-                    circle.setAttributeNS (null, 'cy', Yvalue);
-                    circle.setAttributeNS (null, 'r', 22.5);
+                    circle.setAttributeNS (null, 'cx', Xvalue); //x-verdi
+                    circle.setAttributeNS (null, 'cy', Yvalue); //y-verdi
+                    circle.setAttributeNS (null, 'r', 22.5); //radius
                     circle.setAttributeNS (null, 'style', 'fill: ' + color);
                     svg.appendChild(circle); //legger til i svg-elementet
 
                 //setter navn inni sirklen
                 let cirName = document.createElementNS (svgns, 'text');
-                    cirName.setAttributeNS (null, 'x', Xvalue)
-                    cirName.setAttributeNS (null, 'y', Yvalue - 4)
+                    cirName.setAttributeNS (null, 'x', Xvalue) //x-verdi
+                    cirName.setAttributeNS (null, 'y', Yvalue - 4) //y-verdi som justeres for å få avstand mellom navn og verdi
                     cirName.setAttributeNS (null, 'class', 'cirtxt')
                     cirName.textContent = name;
-                    svg.appendChild(cirName);
+                    svg.appendChild(cirName); //legger til i svg-elementet
 
                 //setter verdien inni sirkelen
                 let cirValue = document.createElementNS (svgns, 'text');
-                    cirValue.setAttributeNS (null, 'x', Xvalue)
-                    cirValue.setAttributeNS (null, 'y', Yvalue + 12);
+                    cirValue.setAttributeNS (null, 'x', Xvalue) //x-verdi
+                    cirValue.setAttributeNS (null, 'y', Yvalue + 12); //y-verdi som justeres for å få avstand mellom navn og verdi
                     cirValue.setAttributeNS (null, 'class', 'cirtxt')
                     cirValue.textContent = value;
-                    svg.appendChild(cirValue);
+                    svg.appendChild(cirValue); //legger til i svg-elementet
             }
 
+            //Legger til URL-ene som har blitt opprettet fra vært gruppemedlem
             let urls = [
-            'https://bacit.info/hwr/20221109135259-656895452ed10ba9b378ad70f9649eda.json',
-            'https://bacit.info/hwr/20221109140337-580336782a9f32d6911364f4382273c7.json',
-            'https://bacit.info/hwr/20221109140803-679077ef6957735f7278f24fe6bfd4a2.json',
-            'https://bacit.info/hwr/20221110114032-64db7db52bd1995693916f215a0ce60d.json',
-            'https://bacit.info/hwr/20221109142122-b3b96fa2ae88c968a19f256da7a6e38a.json',
-            'https://bacit.info/hwr/20221109140329-1b520c83a9ca3d0ba8af3bb05278ea43.json',
+            'https://bacit.info/hwr/20221109135259-656895452ed10ba9b378ad70f9649eda.json', //Ruben
+            'https://bacit.info/hwr/20221109140337-580336782a9f32d6911364f4382273c7.json', //Mally
+            'https://bacit.info/hwr/20221109140803-679077ef6957735f7278f24fe6bfd4a2.json', //Niklas
+            'https://bacit.info/hwr/20221110114032-64db7db52bd1995693916f215a0ce60d.json', //Jonas
+            'https://bacit.info/hwr/20221109142122-b3b96fa2ae88c968a19f256da7a6e38a.json', //Majd
+            'https://bacit.info/hwr/20221109140329-1b520c83a9ca3d0ba8af3bb05278ea43.json', //Sander
             ]
 
+            //Henter trxid og time fra localstorage, og lager en url som legges sammen med de andre urlene
             if (localStorage.local_trxid) {
             const trxid = localStorage.getItem('local_trxid');
             const time = localStorage.getItem('local_time');
@@ -383,7 +385,8 @@
                 let Majd = data[4];
                 let Sander = data[5];
 
-                let Lokal = {}; // default value
+                //Setter URL-en fra localstorage til en ny "profil", hvis det eksisterer
+                let Lokal = {};
                 if (localStorage.local_trxid) {
                     Lokal = data[6];
                 }

@@ -89,7 +89,7 @@
                         <tr>
                             <div class="sliderdiv">
                                 <p class="slidertxt">Morgenfugl</p>
-                                <input class="sliderz" name="MNf" type="range" min="0" max="100" value="50" id="slider"> 
+                                <input class="sliderz" name="MNf" type="range" min="0" max="100" value="50" id="slider"> <!--Setter verdien på slidere mellom 0-100, der 50 er standardverdien-->
                                 <p class="slidertxt">Natteravn</p> 
                             </div>   
                         </tr>
@@ -241,9 +241,10 @@
             return response.json(); // parses JSON response into native JavaScript objects
         }
 
+        //Oppretter en funksjon for når submit-knappen trykkes på
         function PostForm(event) {
             event.preventDefault();
-            alert("Takk for at du registrerte deg!");
+            alert("Takk for at du registrerte deg!"); //Varsel for at du har registrert deg
             const data = new FormData(event.target);
             const JSONdata = Object.fromEntries(data.entries());
             const results = document.querySelector('.results pre');
@@ -252,11 +253,12 @@
             console.log(data); // JSON data parsed by `data.json()` call
             results.innerText = JSON.stringify(data, null, 2);
 
-            localStorage.setItem('local_trxid', data.trxid);
+            localStorage.setItem('local_trxid', data.trxid); //Lagrer data i localstorage
             localStorage.setItem('local_time', data.time);
         });
     }
 
+    //Funksjonalitet til submit-knappen
     const form = document.querySelector('form');
         form.addEventListener('submit', PostForm);
 
